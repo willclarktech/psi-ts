@@ -1,5 +1,5 @@
 const bigInt = require('big-integer')
-const psi = require('./src').default // CommonJS
+const psi = require('./build').default // CommonJS
 
 // Demonstration of RSA - PSI protocol
 
