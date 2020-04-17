@@ -47,7 +47,7 @@ export default ({ forge, bigInt }) => {
       const randomFactors = (maxInputs = RANDOM_FACTOR_MAX_INPUTS) => {
         return Array.from({
           length: maxInputs
-        }).map(_ => {
+        }).map(() => {
           const n = BigInt(keys.publicKey.n)
           const e = BigInt(keys.publicKey.e)
           // TODO: ensure this is a CSPRNG
