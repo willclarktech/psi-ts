@@ -1,11 +1,11 @@
-import { default as Constants } from '../constants'
-import { default as Provider } from './provider'
-import { default as RSA } from './rsa'
-import { createModuleFactory } from '../../factory'
-import module from './module'
+import rsa, { RsaProtocol } from './rsa'
 
-export default createModuleFactory({
-  provider: Provider,
-  createRSA: RSA,
-  constants: Constants.PROTOCOL
-})(module)
+export type Protocol = {
+  readonly rsa: RsaProtocol
+}
+
+const protocol = {
+  rsa
+}
+
+export default protocol

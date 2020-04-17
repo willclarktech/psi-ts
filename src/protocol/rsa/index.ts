@@ -1,9 +1,14 @@
-import BigInteger from 'big-integer'
-import forge from 'node-forge'
-import { createModuleFactory } from '../../../factory'
-import module from './module'
+import client, { RsaClientInitializer } from './client'
+import server, { RsaServerInitializer } from './server'
 
-export default createModuleFactory({
-  forge: forge,
-  bigInt: BigInteger
-})(module)
+export type RsaProtocol = {
+  readonly client: RsaClientInitializer
+  readonly server: RsaServerInitializer
+}
+
+const rsa = {
+  client,
+  server
+}
+
+export default rsa
