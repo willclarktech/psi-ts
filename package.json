@@ -19,7 +19,10 @@
   ],
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write src",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rm -rf build/",
+    "build": "tsc",
     "start": "node index.js"
   },
   "license": "MIT",
