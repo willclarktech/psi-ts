@@ -1,3 +1,7 @@
-// eslint-disable-next-line no-global-assign
-require = require('esm')(module)
-module.exports = require('./main')
+import { constants, protocol, dataStructure } from './psi'
+
+export default {
+  constants,
+  protocol,
+  dataStructure
+}
