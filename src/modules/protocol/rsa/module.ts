@@ -51,7 +51,7 @@ export default ({ forge, bigInt }) => {
           const n = BigInt(keys.publicKey.n)
           const e = BigInt(keys.publicKey.e)
           // TODO: ensure this is a CSPRNG
-          const r = randomBigInt(0n, n)
+          const r = randomBigInt(0, n)
           // r^-1 mod n
           const rInv = r.modInv(n)
           // r^e mod n
