@@ -1,7 +1,14 @@
-import { constants, protocol, dataStructure } from './psi'
+import dataStructure, { DataStructure } from './dataStructure'
+import protocol, { Protocol } from './protocol'
 
-export default {
-  constants,
-  protocol,
-  dataStructure
+export type Psi = {
+  readonly dataStructure: DataStructure
+  readonly protocol: Protocol
 }
+
+const psi: Psi = {
+  dataStructure,
+  protocol
+}
+
+export default psi
